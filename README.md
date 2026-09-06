@@ -1,1 +1,1 @@
-
+Projeto desenvolvido em C# com integração a banco de dados SQL, voltado para o gerenciamento de uma loja de produtos. O projeto utiliza conceitos de programação orientada a objetos, operações com banco de dados e organização de informações, como cadastro e gerenciamento de produtos. Desenvolvido como parte dos meus estudos em C# e .NET.
