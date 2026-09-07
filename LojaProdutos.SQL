@@ -1,13 +1,38 @@
-Create Database Loja;
-Use Loja;
+-- =========================================
+-- BANCO DE DADOS: Loja
+-- =========================================
 
-Create Table Produto (ID INT IDENTITY (1,1) PRIMARY KEY,
-Nome Varchar(30), Quantidade INT,Valor Decimal(10,2));
+IF DB_ID('Loja') IS NULL
+BEGIN
+    CREATE DATABASE Loja;
+END;
+GO
+
+USE Loja;
+GO
+
+-- =========================================
+-- TABELA DE PRODUTOS
+-- =========================================
+
+IF OBJECT_ID('Produto', 'U') IS NULL
+BEGIN
+    CREATE TABLE Produto
+    (
+        ID INT IDENTITY(1,1) PRIMARY KEY,
+        Nome VARCHAR(30),
+        Quantidade INT,
+        Valor DECIMAL(10,2)
+    );
+END;
+GO
+
+-- =========================================
+-- PRODUTOS INICIAIS
+-- =========================================
 
 INSERT INTO Produto (Nome, Quantidade, Valor)
 VALUES
-
-
 ('Notebook', 10, 3500.00),
 ('Monitor', 15, 1200.00),
 ('Teclado Mecânico', 20, 250.00),
